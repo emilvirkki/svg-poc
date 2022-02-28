@@ -1,0 +1,28 @@
+.interactiveSound {
+    cursor: pointer;
+}
+
+.interactiveSound.playing image {
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-name: pulse;
+    animation: 1s pulse alternate infinite;
+}
+
+.interactiveLink {
+    cursor: pointer;
+}
+
+.interactiveLink a {
+    background: red;
+}
+
+@keyframes pulse {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
