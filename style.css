@@ -25,4 +25,8 @@
     to {
       opacity: 0;
     }
-  }
+}
+
+body {
+  text-align: center;
+}
