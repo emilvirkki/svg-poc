@@ -2,16 +2,18 @@
 // 1-5
 // ääni / linkki
 const persons = ['OPE', 'MAUNO'];
-const numItems = 1; // 5
+const numItems = 5;
 let currentAudio;
 let currentElement;
 
 function setupSound(elem, person, i) {
+    console.log(elem, person, i)
     elem.setAttribute('class', 'interactiveSound');
     let audio = new Audio(`sound/${person}_${i}.m4a`);
     elem.addEventListener('click', function() {
         if (currentAudio === audio) {
             currentAudio.pause();
+            currentAudio.currentTime = 0;
             currentElement.setAttribute('class', 'interactiveSound');
             currentAudio = null;
             currentElement = null;
